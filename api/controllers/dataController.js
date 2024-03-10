@@ -27,7 +27,7 @@ exports.connectUser = (req, res) => {
     ]
 
     if (!toolbox.checkMail(body.mail)) {
-        res.status(400).send('The mail doesn\'t use a correct format');
+        res.status(400).send(`The mail doesn\'t use a correct format - ${body.mail}`);
     } else {
         data.forEach(el => {
             if(el.mail === body.mail) {

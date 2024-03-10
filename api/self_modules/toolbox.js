@@ -1,5 +1,5 @@
 exports.checkMail = (mail) => {
-    var re = /.+\@.+\..+/;
+    var re = /\S+@\S+\.\S+/;
     return re.test(mail);
 };
 
