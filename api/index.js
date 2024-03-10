@@ -12,11 +12,7 @@ const { logs } = require('./controllers/dataController')
 const app = express();
 app.use(cors(corsOptions))
 
-app.use(bodyParser.urlencoded({
-    parameterLimit: 100000,
-    limit: '50mb',
-    extended: true
-  }));
+app.use(bodyParser.json({ limit: '1.1mb'}));
   
 app.use(express.static('public'));
 app.use(cookieParser()); 
