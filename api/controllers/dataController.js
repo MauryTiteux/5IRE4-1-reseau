@@ -7,11 +7,13 @@ const fs = require('fs');
 
 let blogMessages = [];
 
-exports.logs = [
+let logs = [
     {
         message: 'Log initial',
     }
 ]
+
+exports.logs = logs;
 
 exports.connectUser = (req, res) => {
     let body = req.body
