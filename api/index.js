@@ -12,8 +12,6 @@ const { logs } = require('./controllers/dataController')
 const app = express();
 app.use(cors(corsOptions))
 
-app.use(express.urlencoded({extended:true}));
-
 app.use(bodyParser.urlencoded({
     parameterLimit: 100000,
     limit: '50mb',
