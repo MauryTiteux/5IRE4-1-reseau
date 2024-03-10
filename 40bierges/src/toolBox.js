@@ -26,5 +26,5 @@ exports.checkIfConnected = () => {
     return false;
 }
 
-exports.API_URL = 'https://5ire-groupe-api.vercel.app/'
+exports.API_URL = 'https://5ire-groupe-api.vercel.app'
 // exports.API_URL = 'http://localhost:3001'
