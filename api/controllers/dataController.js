@@ -7,11 +7,22 @@ const fs = require('fs');
 
 let blogMessages = [];
 
+exports.logs = [
+    {
+        message: 'Log initial',
+    }
+]
+
 exports.connectUser = (req, res) => {
     let body = req.body
     let user = null
 
-    fs.writeFileSync('../logs.json', 'test writeFileSync')
+    logs = [
+        ...logs,
+        {
+            test: "Log crée lors d'une tentative de connexion"
+        }
+    ]
 
     if (!toolbox.checkMail(body.mail)) {
         res.status(400).send('The mail doesn\'t use a correct format');

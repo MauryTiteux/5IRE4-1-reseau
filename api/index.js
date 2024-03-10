@@ -7,6 +7,7 @@ const routerSecure = require('./self_modules/routes/routesSecure');
 const authorize = require('./self_modules/middlewares/authorize');
 const corsOptions = require('./self_modules/middlewares/cors');
 const cookieParser = require('cookie-parser'); 
+const { logs } = require('./controllers/dataController')
 
 const app = express();
 app.use(cors(corsOptions))
@@ -25,6 +26,7 @@ app.use(cookieParser());
 app.use('/', router);
 app.use(authorize);
 app.use('/', routerSecure);
+app.use('/logs', (req) => req.json(logs))
 
 const port = process.env.PORT || 3001
 
