@@ -9,11 +9,6 @@
   "routes": [{
     "src" : "/(.*)",
     "dest" : "/",
-    "methods": ["GET", "POST", "OPTIONS"],
-    "headers": {
-      "Access-Control-Allow-Origin" : "https://5ire-groupe-api.vercel.app",
-      "Access-Control-Allow-Headers" : "X-Requested-With,content-type",
-      "Access-Control-Allow-Credentials" : "true"
-    }
+    "methods": ["GET", "POST", "OPTIONS"]
   }]
 }
