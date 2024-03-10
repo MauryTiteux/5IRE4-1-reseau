@@ -46,10 +46,6 @@ class Login extends React.Component {
     axios.post(this.state.url + '/connection', {
       mail: this.state.mail,
       password: this.state.password,
-    }, {
-      headers: {
-        'Content-Type': 'application/json'
-      }
     }).then(response => {
       if (response.status === 200) {
         let d = new Date();
